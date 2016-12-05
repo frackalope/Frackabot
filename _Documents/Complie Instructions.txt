@@ -1,0 +1,9 @@
+
+update twitchbot source.
+update discord source.
+
+load and compile twitchbot source.
+load and compile discord source.
+
+update frackabot source.
+load and compile frackabot source.

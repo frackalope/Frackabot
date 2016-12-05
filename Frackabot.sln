@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frackabot", "Frackabot\Frackabot.csproj", "{E1F294B7-32AE-4FA7-B66B-F359203D11D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrackabotLib", "FrackabotLib\FrackabotLib.csproj", "{A5487CCA-0C6E-43A5-87EA-A5AC25EAE5F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrackabotUpdater", "FrackabotUpdater\FrackabotUpdater.csproj", "{375847EE-C475-45B5-A037-10B5F362B0B0}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1F294B7-32AE-4FA7-B66B-F359203D11D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F294B7-32AE-4FA7-B66B-F359203D11D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F294B7-32AE-4FA7-B66B-F359203D11D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F294B7-32AE-4FA7-B66B-F359203D11D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5487CCA-0C6E-43A5-87EA-A5AC25EAE5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5487CCA-0C6E-43A5-87EA-A5AC25EAE5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5487CCA-0C6E-43A5-87EA-A5AC25EAE5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5487CCA-0C6E-43A5-87EA-A5AC25EAE5F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{375847EE-C475-45B5-A037-10B5F362B0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375847EE-C475-45B5-A037-10B5F362B0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375847EE-C475-45B5-A037-10B5F362B0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375847EE-C475-45B5-A037-10B5F362B0B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

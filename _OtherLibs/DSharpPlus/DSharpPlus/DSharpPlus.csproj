@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB3D8310-DFAD-4295-97F9-82E253647583}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DSharpPlus</RootNamespace>
+    <AssemblyName>DSharpPlus</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\DSharpPlus.XML</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.2-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sodium, Version=0.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\libsodium-net.0.10.0-beta3\lib\Net40\Sodium.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="websocket-sharp, Version=1.0.2.59611, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DebugLogger.cs" />
+    <Compile Include="DiscordClient.cs" />
+    <Compile Include="DiscordConfig.cs" />
+    <Compile Include="Enums\LogLevel.cs" />
+    <Compile Include="Enums\MentionType.cs" />
+    <Compile Include="Enums\VoiceApplication.cs" />
+    <Compile Include="Enums\VoiceSettings.cs" />
+    <Compile Include="EventArgs\ChannelCreateEventArgs.cs" />
+    <Compile Include="EventArgs\ChannelDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\ChannelUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\DMChannelCreateEventArgs.cs" />
+    <Compile Include="EventArgs\DMChannelDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\GuildBanAddEventArgs.cs" />
+    <Compile Include="EventArgs\GuildBanRemoveEventArgs.cs" />
+    <Compile Include="EventArgs\GuildCreateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\GuildEmojisUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildIntegrationsUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildMemberAddEventArgs.cs" />
+    <Compile Include="EventArgs\GuildMemberRemoveEventArgs.cs" />
+    <Compile Include="EventArgs\GuildMembersChunkEventArgs.cs" />
+    <Compile Include="EventArgs\GuildMemberUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildRoleCreateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildRoleDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\GuildRoleUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\GuildUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\MessageBulkDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\MessageCreateEventArgs.cs" />
+    <Compile Include="EventArgs\MessageDeleteEventArgs.cs" />
+    <Compile Include="EventArgs\MessageReactionAddEventArgs.cs" />
+    <Compile Include="EventArgs\MessageReactionRemoveAllEventArgs.cs" />
+    <Compile Include="EventArgs\MessageReactionRemoveEventArgs.cs" />
+    <Compile Include="EventArgs\MessageUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\PresenceUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\TypingStartEventArgs.cs" />
+    <Compile Include="EventArgs\UnknownEventArgs.cs" />
+    <Compile Include="EventArgs\UserSettingsUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\UserSpeakingEventArgs.cs" />
+    <Compile Include="EventArgs\UserUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\VoiceReceivedEventArgs.cs" />
+    <Compile Include="EventArgs\VoiceServerUpdateEventArgs.cs" />
+    <Compile Include="EventArgs\VoiceStateUpdateEventArgs.cs" />
+    <Compile Include="Formatter.cs" />
+    <Compile Include="Interfaces\IModule.cs" />
+    <Compile Include="Objects\DiscordAttachment.cs" />
+    <Compile Include="Objects\DiscordConnection.cs" />
+    <Compile Include="Objects\DiscordInvite.cs" />
+    <Compile Include="Enums\Branch.cs" />
+    <Compile Include="Enums\ChannelType.cs" />
+    <Compile Include="Enums\Permission.cs" />
+    <Compile Include="Enums\TokenType.cs" />
+    <Compile Include="Objects\DiscordEmbed.cs" />
+    <Compile Include="Objects\DiscordEmbedAuthor.cs" />
+    <Compile Include="Objects\DiscordEmbedField.cs" />
+    <Compile Include="Objects\DiscordEmbedFooter.cs" />
+    <Compile Include="Objects\DiscordEmbedImage.cs" />
+    <Compile Include="Objects\DiscordEmbedProvider.cs" />
+    <Compile Include="Objects\DiscordEmbedThumbnail.cs" />
+    <Compile Include="Objects\DiscordEmbedVideo.cs" />
+    <Compile Include="Objects\DiscordGuildEmbed.cs" />
+    <Compile Include="Objects\DiscordIntegration.cs" />
+    <Compile Include="Objects\DiscordIntegrationAccount.cs" />
+    <Compile Include="Objects\DiscordInviteChannel.cs" />
+    <Compile Include="Objects\DiscordInviteGuild.cs" />
+    <Compile Include="Objects\DiscordInviteMetadata.cs" />
+    <Compile Include="Objects\DiscordOverwrite.cs" />
+    <Compile Include="Objects\DiscordReaction.cs" />
+    <Compile Include="Objects\DiscordWebhook.cs" />
+    <Compile Include="Socket\WebSocketClient.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Voice\DiscordVoiceClient.cs" />
+    <Compile Include="Voice\ByteBuffer.cs" />
+    <Compile Include="Voice\Opus\OpusDecoder.cs" />
+    <Compile Include="Voice\Opus\OpusEncoder.cs" />
+    <Compile Include="Voice\Opus\OpusError.cs" />
+    <Compile Include="Voice\VoicePacket.cs" />
+    <Compile Include="Web\Endpoints.cs" />
+    <Compile Include="Web\RateLimit.cs" />
+    <Compile Include="Web\WebRequestMethod.cs" />
+    <Compile Include="Objects\DiscordChannel.cs" />
+    <Compile Include="Objects\DiscordDMChannel.cs" />
+    <Compile Include="Objects\DiscordEmoji.cs" />
+    <Compile Include="Objects\DiscordGuild.cs" />
+    <Compile Include="Objects\DiscordMember.cs" />
+    <Compile Include="Objects\DiscordMessage.cs" />
+    <Compile Include="Objects\DiscordRole.cs" />
+    <Compile Include="Objects\DiscordVoiceRegion.cs" />
+    <Compile Include="Objects\DiscordVoiceState.cs" />
+    <Compile Include="Objects\SnowflakeObject.cs" />
+    <Compile Include="Objects\DiscordUser.cs" />
+    <Compile Include="Web\WebRequest.cs" />
+    <Compile Include="Web\WebResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\WebWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libopus.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libsodium-64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libsodium.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Baseclass.Contrib.Nuget.Output.2.2.0-xbuild02\build\net40\Baseclass.Contrib.Nuget.Output.targets" Condition="Exists('..\packages\Baseclass.Contrib.Nuget.Output.2.2.0-xbuild02\build\net40\Baseclass.Contrib.Nuget.Output.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Baseclass.Contrib.Nuget.Output.2.2.0-xbuild02\build\net40\Baseclass.Contrib.Nuget.Output.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Baseclass.Contrib.Nuget.Output.2.2.0-xbuild02\build\net40\Baseclass.Contrib.Nuget.Output.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
