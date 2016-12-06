@@ -57,7 +57,24 @@ namespace Frackabot
 		/// <param name="e"></param>
 		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
-
+			e.Cancel = false;
+			switch (e.CloseReason)
+			{
+				// Check settings and see if we need to display a message or just save data.
+				case CloseReason.FormOwnerClosing:
+				case CloseReason.MdiFormClosing:
+				case CloseReason.UserClosing:
+				case CloseReason.None:
+					// ask if we should quit the application, if settings allow us.
+					var messageBoxResult = MessageBox.Show("Are you sure you want to quit?", "Quit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly, false);
+					switch (messageBoxResult)
+					{
+						case DialogResult.No:
+							e.Cancel = true;
+							return;
+					}
+					break;
+			}
 		}
 
 		/// <summary>
