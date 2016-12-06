@@ -69,6 +69,7 @@ namespace FrackabotLib.Utilities
 				return string.Empty;
 			}
 			return _appSettings[key];
+			
 		}
 
 		/// <summary>
